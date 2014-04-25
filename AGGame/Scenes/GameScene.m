@@ -10,6 +10,10 @@
 
 @interface GameScene()
 
+// Layers
+@property (nonatomic) SKNode *backgroundLayer;
+@property (nonatomic) SKNode *uiLayer;
+
 // Gesture Recognizers
 @property (nonatomic) UITapGestureRecognizer *tapGestureRecognizer;
 
@@ -32,7 +36,24 @@
 #pragma mark - Building Scene
 
 - (void)buildScene {
+    [self addLayers];
     [self configurePhysics];
+}
+
+- (void)addLayers {
+    self.backgroundLayer = [SKNode node];
+    self.backgroundLayer.zPosition = 100;
+    [self addChild:self.backgroundLayer];
+    
+//    // Add other layers here, for example:
+//    self.playerLayer = [SKNode node];
+//    self.playerLayer.zPosition = 200;
+//    [self addChild:self.playerLayer];
+    
+    
+    self.uiLayer = [SKNode node];
+    self.uiLayer.zPosition = 1000;
+    [self addChild:self.uiLayer];
 }
 
 - (void)configurePhysics {
