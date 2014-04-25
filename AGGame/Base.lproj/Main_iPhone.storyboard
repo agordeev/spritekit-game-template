@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Jdz-Zy-cUi">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Game Scene View Controller-->
+        <scene sceneID="pZJ-fn-0UG">
+            <objects>
+                <viewController id="Jdz-Zy-cUi" customClass="GameSceneViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A2l-dS-bg9"/>
+                        <viewControllerLayoutGuide type="bottom" id="nJI-tS-l4J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xVo-as-9mx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJb-og-oj1" customClass="SKView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nJI-tS-l4J" firstAttribute="top" secondItem="eJb-og-oj1" secondAttribute="bottom" id="C5N-dX-hKR"/>
+                            <constraint firstAttribute="trailing" secondItem="eJb-og-oj1" secondAttribute="trailing" id="Mak-oZ-GEv"/>
+                            <constraint firstItem="eJb-og-oj1" firstAttribute="top" secondItem="A2l-dS-bg9" secondAttribute="bottom" constant="-20" id="QCz-zl-Zbk"/>
+                            <constraint firstItem="eJb-og-oj1" firstAttribute="leading" secondItem="xVo-as-9mx" secondAttribute="leading" id="TMg-dk-hKo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="skView" destination="eJb-og-oj1" id="dcO-uk-71g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ul-3H-Cwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="-6"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
